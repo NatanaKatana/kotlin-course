@@ -1,4 +1,4 @@
-package ru.stimmax.com.example.cotlincourse.lessons.lesson03
+package ru.stimmax.lessons.lesson03
 
 const val wheels = 4
 
