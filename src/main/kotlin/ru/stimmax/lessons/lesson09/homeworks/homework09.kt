@@ -218,7 +218,6 @@ fun main() {
 
 
 //3.8 Создайте множество строк и конвертируйте его в изменяемый список строк с использованием цикла.
-
     val stringsSet: Set<String> = setOf("Кот-кокос", "Мышь-гашиш", "Гена", "Владивосток")
     val stringsList: MutableList<String> = mutableListOf()
 
