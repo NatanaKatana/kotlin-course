@@ -40,7 +40,7 @@ private fun a7(a: List<Int>?) {
 
 //8. Принимает целое число и возвращает nullable строку.
 fun a8(a: Int): String? {
-    return "jvdkv"
+    return null
 }
 
 //9. Не принимает аргументов и возвращает список nullable строк.
@@ -69,8 +69,7 @@ fun multiplyByTwo(a: Int): Int = a * 2
 //12. Создайте функцию isEven, которая принимает целое число и возвращает true, если число
 // чётное, и false в противном случае.
 fun isEven(a: Int): Boolean {
-    if (a % 2 == 0) return true
-    else return false
+    return (a % 2 == 0)
 }
 
 //13. Напишите функцию printNumbersUntil, которая принимает целое число n и выводит на экран
