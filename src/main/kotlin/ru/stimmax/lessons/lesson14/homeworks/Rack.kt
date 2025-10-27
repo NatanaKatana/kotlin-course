@@ -110,4 +110,3 @@ fun advancedRemoveShelf(index: Int): List<String> {
     return notReplacedItems.toList()
 }
     }
-}
