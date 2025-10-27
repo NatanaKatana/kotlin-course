@@ -1,6 +1,6 @@
 package ru.stimmax.lessons.lesson15.homeworks
 
-open class GeometricFigures(
+abstract class GeometricFigures(
     val name: String,
     val square: Double
 ) {}
