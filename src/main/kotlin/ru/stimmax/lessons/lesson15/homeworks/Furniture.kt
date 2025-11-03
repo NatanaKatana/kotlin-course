@@ -2,8 +2,9 @@ package ru.stimmax.lessons.lesson15.homeworks
 
 open class Furniture(
     val typeOfMaterial: String,
-    val classificationByPurpose: String // По назначению мебель подразделяется на две большие группы: для общественных помещений и жилых (бытовая)
-    val classificationByZone: String    //классифицируется по зонам, для оборудования которых она предназначена. Так, мебель для общественных помещений может быть
+    val classificationByPurpose: String, // По назначению мебель подразделяется на две большие группы: для общественных помещений и жилых (бытовая)
+    val classificationByZone: String
+// классифицируется по зонам, для оборудования которых она предназначена. Так, мебель для общественных помещений может быть
 // предназначена для оборудования зрительных залов, мест президиума, мест отдыха на вокзалах, на. пляжах, в парках.
 // Мебель бытовая подразделяется на мебель для жилых комнат, кухни, передней, ванной, террасы и других помещений
 ) {
@@ -32,7 +33,6 @@ class coffeeTables(
     numberOfSupportingLegs: Int,
     hightInCm: Int
 ) : Tables(typeOfMaterial, classificationByPurpose, classificationByZone, numberOfSupportingLegs, hightInCm) {}
-
 
 
 open class Closet(
