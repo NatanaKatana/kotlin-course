@@ -17,33 +17,23 @@ class Cart {
 
     // ---------- 4. Перегруженный метод: добавление словаря ----------
     fun addToCart(newItems: Map<Int, Int>) {
-        for ((id, qty) in newItems) {
-            items[id] = items.getOrDefault(id, 0) + qty
-        }
+        newItems.forEach { addToCart(it.key, it.value) }
     }
 
     // ---------- 5. Перегруженный метод: добавление списка ----------
     fun addToCart(ids: List<Int>) {
-        for (id in ids) {
-            items[id] = items.getOrDefault(id, 0) + 1
-        }
+        ids.forEach { addToCart(it) }
     }
 
     // ---------- 6. Переопределяем toString ----------
     override fun toString(): String {
-        if (items.isEmpty()) return "Корзина пуста."
-
-        val sb = StringBuilder()
-        sb.append("ID товара | Количество\n")
-        sb.append("---------------------\n")
-        var totalItems = 0
-        for ((id, qty) in items) {
-            sb.append(String.format("%9d | %9d\n", id, qty))
-            totalItems += qty
-        }
-        sb.append("---------------------\n")
-        sb.append("Итоговое количество артикулов: ${items.size}\n")
-        sb.append("Общее количество товаров: $totalItems\n")
-        return sb.toString()
+        val countID = items.size
+        val countAmount = items.values.sum()
+        val list = items.map { "Артикул: ${it.key}  Количество:${it.value}" }
+            .joinToString("\n")
+        return list + "Всего артикулов: $countID\n Всего товаров: $countAmount"
     }
+
 }
+
+
